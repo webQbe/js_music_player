@@ -21,12 +21,38 @@ loadSong(songs[songIndex]); // Pass song to loadSong() from array using index
 // Define loadSong()
 function loadSong(song){
     // Update DOM Elements
-    title.innerHTML = song;
+    title.innerHTML = song; 
     audio.src = `music/${song}.mp3`;
     cover.src = `images/${song}.jpg`; 
 }
 
+// Event Listeners
+playBtn.addEventListener('click', () => {
 
+    // Check if a song is playing
+    const isPlaying = musicContainer.classList.contains('play');
+
+     if(isPlaying){
+
+        pauseSong();
+
+     } else {
+
+        playSong();
+
+     }
+
+});
+
+
+function playSong(){
+
+}
+
+
+function pauseSong(){
+
+}
 
 
 
