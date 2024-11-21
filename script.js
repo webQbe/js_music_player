@@ -86,8 +86,23 @@ function pauseSong(){
 
 
 function prevSong(){
+ 
+    songIndex-- // Decrease Index
 
+    // If index is negative
+    if(songIndex < 0){
 
+        // Go to last song
+        songIndex = songs.length - 1;
+
+    }
+
+    // Load song
+    loadSong(songs[songIndex]);
+
+    // Play song
+    playSong();
+    
 }
 
 
