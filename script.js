@@ -9,6 +9,8 @@ const progressContainer = document.querySelector('.progress-container');
 const title = document.querySelector('#title');
 const cover = document.querySelector('#cover');
 
+// Songs Array
+const songs = ['hey', 'summer', 'ukulele'];
 
 
 
