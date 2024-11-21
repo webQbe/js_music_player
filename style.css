@@ -177,7 +177,7 @@ body{
 
     border-radius: 50%; /* Make it circle shaped */
 
-    transform: translate(-50%, -50%); /* Push it to middle 
+    transform: translate(-50%, -90%); /* Push it to middle 
         Adjust small circle's position, so its center aligns exactly with center of container.
         Without this, left: 50%; bottom: 50%; would align the top-left 
         corner of circle at center. 
@@ -219,6 +219,53 @@ body{
 .action-btn:focus{
 
     outline: 0;
-    
+
 }
 
+
+.music-info{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px 15px 0 0; /* Rounded only at top corners */
+    position: absolute;
+    top: 0;
+    left: 20px;
+
+    /* Dynamically calculate the width */
+    width: calc(100% - 40px); /* Here, it sets the maximum width to 100% of the parent container's width minus 40px. This calculation can be useful for keeping padding, margins, or other spacing consistent, regardless of the container's actual width. */
+
+    padding: 10px 10px 10px 150px;
+    opacity: 0;  /* Hidden (fully transparent) */
+    transform: translateY(0%); /* Positioned at its default location */
+
+    /* Smooth transition for visibility and movement */
+    transition: transform 0.3s ease-in opacity 0.3s ease-in; 
+
+    /* Syntax Breakdown
+
+        transition: transform 0.3s ease-in, opacity 0.3s ease-in;:
+
+            Ensures a smooth transition effect when either the transform or opacity values change.
+
+            0.3s: The duration of the transition is 0.3 seconds.
+            
+            ease-in: The transition starts slowly and accelerates towards the end.
+    
+    */
+
+}
+
+.music-info h4{
+
+    margin: 0;
+
+}
+
+/* .music-info when music playing */
+.music-container.play .music-info {
+
+    opacity: 1; /* Fully visible */
+    transform: translateY(-100%); /* Moved upwards 
+    Moves the .music-info element upwards by 100% of its height, creating a sliding effect. */
+
+
+}
