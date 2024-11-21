@@ -54,12 +54,17 @@ function playSong(){
     playBtn.querySelector('i.fas').classList.remove('fa-play'); // Remove play icon
     playBtn.querySelector('i.fas').classList.add('fa-pause'); // Add pause icon
 
-    
-
 }
 
 
 function pauseSong(){
+
+    // Remove .play class
+    musicContainer.classList.remove('play');
+
+    // Select <i class='fas'> to change icon
+    playBtn.querySelector('i.fas').classList.add('fa-play'); // Add play icon
+    playBtn.querySelector('i.fas').classList.remove('fa-pause'); // Remove pause icon
 
 }
 
