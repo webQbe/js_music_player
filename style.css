@@ -194,6 +194,7 @@ body{
 
 }
 
+/* Style prev & next buttons */
 .action-btn{
 
     background-color: #fff;
@@ -203,5 +204,21 @@ body{
     cursor: pointer;
     padding: 10px;
     margin: 0 20px; /* T-B & L-R */
+
+}
+
+/* Style play button */
+.action-btn-big{
+
+    color: #cdc2d0;
+    font-size: 30px;
+
+}
+
+/* Remove focus outline */
+.action-btn:focus{
+
+    outline: 0;
     
 }
+
