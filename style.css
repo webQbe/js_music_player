@@ -119,7 +119,28 @@ body{
        infinite: The animation repeats indefinitely.
     
     */
+
+    /* Pause animation by default */
+    animation-play-state: paused;
+
 }
+
+/* Add .play class to .music-container with JS to run animation */
+.music-container.play .img-container img{
+
+    animation-play-state: running;
+    
+    /* Syntax Breakdown : animation-play-state: running;
+
+        animation-play-state: This CSS property controls whether an animation is currently running or paused.
+
+            running: Causes the animation to play or resume.
+            paused: Halts the animation at its current state.
+
+    */
+
+}
+
 
 /* Define img rotation  */
 @keyframes rotate {
