@@ -1,1 +1,53 @@
-!
+/* Import Font */
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+
+/* Page reset */
+* {
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+
+    /* Create a smooth transition between grey & pink  */
+    background-image: linear-gradient(0deg, 
+    rgb(247, 247, 247) 23.8%, /* grey */
+    rgb(252, 221, 221) 92% /* pink */
+    );
+    /* Syntax Breakdown:
+
+        linear-gradient: Specifies a gradient that changes color along a straight line.
+
+        0deg: Determines the direction of the gradient. 
+
+            0deg: Starts the gradient from the bottom of the element and moves upwards.
+            90deg: Moves from the left side to the right.
+            180deg: Starts from the top and moves downwards.
+            -90deg: Moves from the right side to the left.
+
+        rgb(247, 247, 247): The first color, a very light gray.
+
+        23.8%: Specifies where this color ends in the gradient. The light gray color will dominate the first 23.8% of the gradient's length.
+
+        rgb(252, 221, 221): The second color, a pink.
+
+        92%: Specifies where this color reaches full dominance, starting to blend in earlier. Between 23.8% and 92%, the gradient gradually transitions from light gray to pink.
+
+        Visual Effect:
+
+            The gradient starts at the bottom with a light gray (rgb(247, 247, 247)).
+
+            By 23.8% of the way up, the light gray reaches full opacity and begins transitioning.
+
+            Between 23.8% and 92% of the element's height, the gradient smoothly transitions to pink (rgb(252, 221, 221).
+
+            The pink color dominates fully from 92% to the top of the element. */
+
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center X */
+    justify-content: center; /* Center Y */
+}
