@@ -12,6 +12,21 @@ const cover = document.querySelector('#cover');
 // Songs Array
 const songs = ['hey', 'summer', 'ukulele'];
 
+// Keep track of songs
+let songIndex = 0; // Index 2 = ukulele
+
+// Update song details
+loadSong(songs[songIndex]); // Pass song to loadSong() from array using index
+
+// Define loadSong()
+function loadSong(song){
+    // Update DOM Elements
+    title.innerHTML = song;
+    audio.src = `music/${song}.mp3`;
+    cover.src = `images/${song}.jpg`; 
+}
+
+
 
 
 
