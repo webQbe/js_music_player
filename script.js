@@ -34,7 +34,7 @@ playBtn.addEventListener('click', () => {
 
      if(isPlaying){
 
-        pauseSong();
+        pauseSong(); 
 
      } else {
 
@@ -49,7 +49,13 @@ function playSong(){
 
     // Add .play class
     musicContainer.classList.add('play');
+
+    // Select <i class='fas'> to change icon
+    playBtn.querySelector('i.fas').classList.remove('fa-play'); // Remove play icon
+    playBtn.querySelector('i.fas').classList.add('fa-pause'); // Add pause icon
+
     
+
 }
 
 
