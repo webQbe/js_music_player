@@ -47,6 +47,9 @@ playBtn.addEventListener('click', () => {
 
 function playSong(){
 
+    // Add .play class
+    musicContainer.classList.add('play');
+    
 }
 
 
