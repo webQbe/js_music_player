@@ -129,7 +129,7 @@ body{
 .music-container.play .img-container img{
 
     animation-play-state: running;
-    
+
     /* Syntax Breakdown : animation-play-state: running;
 
         animation-play-state: This CSS property controls whether an animation is currently running or paused.
@@ -182,6 +182,15 @@ body{
         Without this, left: 50%; bottom: 50%; would align the top-left 
         corner of circle at center. 
 */
+
+}
+
+.navigation {
+
+    display: flex; /* Align child elements */
+    align-items: center; /* X Center */
+    justify-content: center; /* Y Center */
+    z-index: 1; /* Bring to Front */
 
 }
 
