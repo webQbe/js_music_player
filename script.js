@@ -54,6 +54,9 @@ function playSong(){
     playBtn.querySelector('i.fas').classList.remove('fa-play'); // Remove play icon
     playBtn.querySelector('i.fas').classList.add('fa-pause'); // Add pause icon
 
+    // Play Audio
+    audio.play();
+
 }
 
 
@@ -65,6 +68,10 @@ function pauseSong(){
     // Select <i class='fas'> to change icon
     playBtn.querySelector('i.fas').classList.add('fa-play'); // Add play icon
     playBtn.querySelector('i.fas').classList.remove('fa-pause'); // Remove pause icon
+
+
+    // Pause Audio
+    audio.pause();
 
 }
 
