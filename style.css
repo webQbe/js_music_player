@@ -86,7 +86,6 @@ body{
     width: 110px;
 }
 
-
 /* Styling Image
    Ensure image is circular, cropped, and positioned at the bottom of container. */
 .img-container img{
@@ -105,4 +104,28 @@ body{
     left: 0;
 }
 
+
+/* Add a small circle to center of image */
+.img-container::after{
+
+    content: ''; /* Generate an empty pseudo-element */
+
+    background-color: #fff;
+    height: 20px;
+    width: 20px;
+
+    position: absolute; /* Place small circle inside container relative to its bounds. */
+
+    left: 50%; /* Position center of small circle at the center of container */
+    bottom: 50%;
+
+    border-radius: 50%; /* Make it circle shaped */
+
+    transform: translate(-50%, -50%); /* Push it to middle 
+        Adjust small circle's position, so its center aligns exactly with center of container.
+        Without this, left: 50%; bottom: 50%; would align the top-left 
+        corner of circle at center. 
+*/
+
+}
 
