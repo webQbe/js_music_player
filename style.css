@@ -244,7 +244,7 @@ body{
 
         transition: transform 0.3s ease-in, opacity 0.3s ease-in;:
 
-            Ensures a smooth transition effect when either the transform or opacity values change.
+            transform: Ensures a smooth transition effect when either the transform or opacity values change.
 
             0.3s: The duration of the transition is 0.3 seconds.
             
@@ -267,5 +267,30 @@ body{
     transform: translateY(-100%); /* Moved upwards 
     Moves the .music-info element upwards by 100% of its height, creating a sliding effect. */
 
+
+}
+
+
+.progress-container{
+
+    /* .progress-container acts as a fixed background. */
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer; /* Makes it interactive (e.g., for seeking progress) */
+    margin: 10px 0; /* T-B & L-R */
+    height: 4px;
+    width: 100%;
+
+}
+
+.progress {
+
+    background-color: #fe8daa;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%; /* Starts with no progress (0% width) */
+    
+    transition: width 0.1s linear; /* Smooth transition for width changes 
+        ensures that changes to the width property are animated smoothly over 0.1 seconds with a constant speed without abrupt jumps.*/
 
 }
