@@ -75,8 +75,13 @@ body{
     
     display: flex; /* X Align child elements  */
     padding: 20px 30px; /* TB & LR */
-    position: relative; /* music-info element is absolute */
+    position: relative; /* music-info is absolute */
     margin: 100px 0; 
     z-index: 10; /* Send to back */
 }
 
+
+.img-container{
+    position: relative; /* Image is absolute */
+    width: 110px;
+}
