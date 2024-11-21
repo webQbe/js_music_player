@@ -27,6 +27,8 @@ function loadSong(song){
 }
 
 // Event Listeners
+
+// Listen for Play/Pause button click
 playBtn.addEventListener('click', () => {
 
     // Check if a song is playing
@@ -43,6 +45,12 @@ playBtn.addEventListener('click', () => {
      }
 
 });
+
+// Listen for Prev/Next button clicks
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click', nextSong);
+
+
 
 
 function playSong(){
@@ -76,4 +84,15 @@ function pauseSong(){
 }
 
 
+
+function prevSong(){
+
+
+}
+
+
+function nextSong(){
+
+
+}
 
