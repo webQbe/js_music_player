@@ -102,8 +102,43 @@ body{
     /* Anchor the bottom-left corner of the image to the bottom-left corner of the .img-container. */
     bottom: 0;
     left: 0;
+
+    /* Add image rotating animation */
+    animation: rotate 3s linear infinite;
+
+    /* Syntax Breakdown
+
+       animation: rotate 3s linear infinite;
+    
+       rotate: Refers to the @keyframes rotate block, which defines the rotation behavior.
+
+       3s: The duration of the animation is 3 seconds, meaning one full rotation happens in 3 seconds. 
+
+       linear: The rotation happens at a constant speed throughout the animation cycle.
+
+       infinite: The animation repeats indefinitely.
+    
+    */
 }
 
+/* Define img rotation  */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+ 
+    to{
+        transform: rotate(360deg);
+    }
+
+    /* Syntax Breakdown
+    
+        from (0% progress): The transform property is set to rotate(0deg), meaning the image starts without any rotation.
+
+        to (100% progress): The transform property is set to rotate(360deg), which represents a full clockwise rotation.
+    
+    */
+}
 
 /* Add a small circle to center of image */
 .img-container::after{
