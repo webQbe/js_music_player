@@ -56,6 +56,9 @@ audio.addEventListener('timeupdate', updateProgress);
 // Listen for click event on progress container element
 progressContainer.addEventListener('click', setProgress);
 
+// Listen for ended event in audio to play next
+audio.addEventListener('ended', nextSong);
+
 
 /* Event Listener Setup
 
@@ -179,3 +182,4 @@ function setProgress(event){
     audio.currentTime = (clickX / width) * duration;
 
 }
+
