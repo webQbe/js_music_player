@@ -163,10 +163,14 @@ function updateProgress(){
 
 }
 
-function setProgress(){
+function setProgress(event){
     
-    // Log total width
+    // Get progressContainer total width
     const width = progressContainer.clientWidth;
-    console.log(width);
+
+    // Get clicked spot within the container
+    const clickX = event.offsetX;
+
+    console.log(clickX);
 
 }
