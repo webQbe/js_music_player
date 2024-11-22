@@ -168,9 +168,14 @@ function setProgress(event){
     // Get progressContainer total width
     const width = progressContainer.clientWidth;
 
-    // Get clicked spot within the container
+    // Get clicked time within the container
     const clickX = event.offsetX;
 
-    console.log(clickX);
+    // Get audio duration
+    const duration = audio.duration;
+
+    // Set currentTime to clicked time
+    // New currentTime will update progress
+    audio.currentTime = (clickX / width) * duration;
 
 }
