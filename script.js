@@ -50,6 +50,20 @@ playBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 
+// Listen for timeupdate event in audio element
+audio.addEventListener('timeupdate', updateProgress);
+
+/* Event Listener Setup
+
+   - timeupdate event fires continuously as the audio plays, 
+     approximately 4–66 times per second (depending on the browser). 
+
+   - It triggers the updateProgress function every time the playback time changes.
+   
+   */
+
+
+
 
 function playSong(){
 
@@ -132,4 +146,9 @@ function nextSong(){
 }
 
 
+function updateProgress(){
 
+    // Log current time of audio
+    console.log(audio.currentTime);
+
+}
