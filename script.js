@@ -51,8 +51,6 @@ prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 
 
-
-
 function playSong(){
 
     // Add .play class
@@ -108,6 +106,30 @@ function prevSong(){
 
 function nextSong(){
 
+    songIndex++ // Increase Index
+
+    // If index is at the end
+    if(songIndex > songs.length - 1){ 
+    // songs.length - 1 = because index starts from 0
+
+        // Go to first song
+        songIndex = 0;
+
+         // Load song
+        loadSong(songs[songIndex]);
+
+        // Play song
+        playSong();
+
+    }
+
+    // Load song
+    loadSong(songs[songIndex]);
+
+    // Play song
+    playSong();
 
 }
+
+
 
