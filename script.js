@@ -148,7 +148,13 @@ function nextSong(){
 
 function updateProgress(){
 
-    // Log current time of audio
-    console.log(audio.currentTime);
+    // Get audio's current time & duration
+    const {duration, currentTime} = audio;
+
+    // Calculate current progress
+    const progressPercent = (currentTime / duration) * 100;
+
+    // Update progress bar width
+    progress.style.width = `${progressPercent}%`;
 
 }
