@@ -1,5 +1,6 @@
 # JavaScript Music Player
 
+- Using HTML5 Audio API
 - Play songs in a folder
 - Switch to Next & Previous song
 - Display song title
