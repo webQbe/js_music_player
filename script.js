@@ -53,6 +53,10 @@ nextBtn.addEventListener('click', nextSong);
 // Listen for timeupdate event in audio element
 audio.addEventListener('timeupdate', updateProgress);
 
+// Listen for click event on progress container element
+progressContainer.addEventListener('click', setProgress);
+
+
 /* Event Listener Setup
 
    - timeupdate event fires continuously as the audio plays, 
@@ -156,5 +160,13 @@ function updateProgress(){
 
     // Update progress bar width
     progress.style.width = `${progressPercent}%`;
+
+}
+
+function setProgress(){
+    
+    // Log total width
+    const width = progressContainer.clientWidth;
+    console.log(width);
 
 }
